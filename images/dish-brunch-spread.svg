@@ -1,0 +1,54 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t3">
+<title id="t3">Overhead illustration of a shared brunch table spread with plates, coffee and pastries</title>
+<defs>
+  <linearGradient id="table3" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#c9a06a"/>
+    <stop offset="100%" stop-color="#a5773f"/>
+  </linearGradient>
+  <radialGradient id="plateA" cx="45%" cy="35%" r="70%">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="100%" stop-color="#ece1c8"/>
+  </radialGradient>
+  <radialGradient id="jam3" cx="40%" cy="30%" r="75%">
+    <stop offset="0%" stop-color="#e6a840"/>
+    <stop offset="100%" stop-color="#b9791d"/>
+  </radialGradient>
+  <radialGradient id="cup3" cx="35%" cy="30%" r="80%">
+    <stop offset="0%" stop-color="#4a3524"/>
+    <stop offset="100%" stop-color="#241a11"/>
+  </radialGradient>
+  <linearGradient id="croissant3" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#e6b76b"/>
+    <stop offset="100%" stop-color="#b9812f"/>
+  </linearGradient>
+</defs>
+
+<rect width="400" height="300" fill="url(#table3)"/>
+<line x1="0" y1="60" x2="400" y2="52" stroke="#8a6134" stroke-width="2" opacity="0.3"/>
+<line x1="0" y1="240" x2="400" y2="248" stroke="#8a6134" stroke-width="2" opacity="0.3"/>
+
+<ellipse cx="112" cy="185" rx="66" ry="14" fill="#3a2510" opacity="0.18"/>
+<circle cx="110" cy="175" r="64" fill="url(#plateA)" stroke="#ddd0b2" stroke-width="3"/>
+<circle cx="110" cy="175" r="32" fill="url(#jam3)"/>
+<circle cx="110" cy="175" r="14" fill="#f4c96a"/>
+
+<ellipse cx="290" cy="168" rx="12" ry="52" fill="#3a2510" opacity="0.14"/>
+<circle cx="288" cy="160" r="54" fill="url(#plateA)" stroke="#ddd0b2" stroke-width="3"/>
+<ellipse cx="288" cy="160" rx="36" ry="19" fill="url(#croissant3)"/>
+<path d="M260 160 q28 -14 56 0" stroke="#8f611f" stroke-width="2" fill="none" opacity="0.5"/>
+<circle cx="272" cy="153" r="4" fill="#8a3d1e"/>
+<circle cx="302" cy="156" r="4" fill="#8a3d1e"/>
+<circle cx="288" cy="167" r="4" fill="#5c6a50"/>
+
+<ellipse cx="207" cy="128" rx="46" ry="10" fill="#3a2510" opacity="0.15"/>
+<circle cx="205" cy="120" r="44" fill="url(#cup3)"/>
+<path d="M205 88 q26 14 26 34 q0 24 -26 38 q-26 -14 -26 -38 q0 -20 26 -34z" fill="#f4ead4" opacity="0.92"/>
+<path d="M247 118 q26 0 26 24 q0 20 -20 22" stroke="#241a11" stroke-width="7" fill="none" stroke-linecap="round"/>
+
+<ellipse cx="330" cy="235" rx="14" ry="48" fill="#3a2510" opacity="0.13"/>
+<rect x="322" y="200" width="16" height="60" rx="8" fill="#2a231c"/>
+<path d="M330 200 q30 0 30 28 q0 22 -22 24" stroke="#2a231c" stroke-width="7" fill="none" stroke-linecap="round"/>
+
+<circle cx="60" cy="250" r="5" fill="#7c8b6f"/>
+<circle cx="72" cy="258" r="4" fill="#94a487"/>
+</svg>

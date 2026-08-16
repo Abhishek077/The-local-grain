@@ -1,0 +1,53 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t6">
+<title id="t6">Illustration of a warm grain bowl with roast pumpkin, greens, seeds and tahini dressing</title>
+<defs>
+  <linearGradient id="table6" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f3ead9"/>
+    <stop offset="100%" stop-color="#e2d3ae"/>
+  </linearGradient>
+  <radialGradient id="bowl6" cx="45%" cy="30%" r="75%">
+    <stop offset="0%" stop-color="#e2ac5c"/>
+    <stop offset="100%" stop-color="#a5773f"/>
+  </radialGradient>
+  <radialGradient id="grain6" cx="45%" cy="35%" r="75%">
+    <stop offset="0%" stop-color="#fdf6e3"/>
+    <stop offset="100%" stop-color="#eddcae"/>
+  </radialGradient>
+  <linearGradient id="pumpkin6" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#f2b23a"/>
+    <stop offset="100%" stop-color="#c9781c"/>
+  </linearGradient>
+</defs>
+
+<rect width="400" height="300" fill="url(#table6)"/>
+<ellipse cx="200" cy="248" rx="150" ry="20" fill="#3a2c1a" opacity="0.15"/>
+<ellipse cx="200" cy="140" rx="135" ry="112" fill="url(#bowl6)"/>
+<ellipse cx="200" cy="150" rx="116" ry="94" fill="url(#grain6)"/>
+
+<g opacity="0.5">
+<circle cx="150" cy="140" r="1.6" fill="#c9a45a"/>
+<circle cx="165" cy="150" r="1.6" fill="#c9a45a"/>
+<circle cx="180" cy="135" r="1.6" fill="#c9a45a"/>
+<circle cx="220" cy="145" r="1.6" fill="#c9a45a"/>
+<circle cx="240" cy="155" r="1.6" fill="#c9a45a"/>
+<circle cx="255" cy="138" r="1.6" fill="#c9a45a"/>
+<circle cx="200" cy="165" r="1.6" fill="#c9a45a"/>
+</g>
+
+<path d="M138 128 q64 -38 128 0 q-64 26 -128 0z" fill="#7c8b6f"/>
+<path d="M148 126 q54 -26 108 0 q-54 20 -108 0z" fill="#94a487" opacity="0.7"/>
+
+<ellipse cx="163" cy="178" rx="24" ry="18" fill="url(#pumpkin6)"/>
+<ellipse cx="155" cy="172" rx="7" ry="5" fill="#ffce7a" opacity="0.6"/>
+<ellipse cx="208" cy="188" rx="20" ry="16" fill="url(#pumpkin6)"/>
+<ellipse cx="248" cy="166" rx="18" ry="14" fill="url(#pumpkin6)"/>
+
+<circle cx="150" cy="150" r="2.6" fill="#5c6a50"/>
+<circle cx="172" cy="144" r="2.6" fill="#5c6a50"/>
+<circle cx="228" cy="140" r="2.6" fill="#5c6a50"/>
+<circle cx="252" cy="150" r="2.6" fill="#5c6a50"/>
+<circle cx="190" cy="200" r="2.6" fill="#a6512a"/>
+<circle cx="210" cy="205" r="2.6" fill="#a6512a"/>
+
+<path d="M170 160 q30 14 60 0" stroke="#e4b15c" stroke-width="3" fill="none" opacity="0.7" stroke-linecap="round"/>
+</svg>

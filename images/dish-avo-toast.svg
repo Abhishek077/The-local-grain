@@ -1,0 +1,65 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t1">
+<title id="t1">Illustration of smashed avocado on sourdough toast with a poached egg and dukkah, on a wooden board</title>
+<defs>
+  <linearGradient id="wood1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#c9a06a"/>
+    <stop offset="100%" stop-color="#a97c47"/>
+  </linearGradient>
+  <radialGradient id="plate1" cx="50%" cy="40%" r="65%">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="100%" stop-color="#efe6d6"/>
+  </radialGradient>
+  <linearGradient id="crust1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#e2a75c"/>
+    <stop offset="100%" stop-color="#b97a34"/>
+  </linearGradient>
+  <linearGradient id="crumb1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f4e2b8"/>
+    <stop offset="100%" stop-color="#e6c98a"/>
+  </linearGradient>
+  <linearGradient id="avo1" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#9cb37e"/>
+    <stop offset="100%" stop-color="#6d8455"/>
+  </linearGradient>
+  <radialGradient id="yolk1" cx="40%" cy="35%" r="70%">
+    <stop offset="0%" stop-color="#ffe9a8"/>
+    <stop offset="100%" stop-color="#e8a93f"/>
+  </radialGradient>
+</defs>
+
+<rect width="400" height="300" fill="#f3ead9"/>
+<rect y="0" width="400" height="300" fill="url(#wood1)"/>
+<path d="M0 0 h400 v300 h-400 z" fill="url(#wood1)"/>
+<line x1="0" y1="40" x2="400" y2="34" stroke="#8f6635" stroke-width="2" opacity="0.35"/>
+<line x1="0" y1="110" x2="400" y2="118" stroke="#8f6635" stroke-width="2" opacity="0.3"/>
+<line x1="0" y1="220" x2="400" y2="212" stroke="#8f6635" stroke-width="2" opacity="0.3"/>
+<line x1="0" y1="270" x2="400" y2="278" stroke="#8f6635" stroke-width="2" opacity="0.35"/>
+
+<ellipse cx="205" cy="245" rx="150" ry="20" fill="#3a2c1a" opacity="0.18"/>
+<ellipse cx="200" cy="150" rx="130" ry="115" fill="url(#plate1)" stroke="#d8ccb0" stroke-width="3"/>
+<ellipse cx="200" cy="150" rx="108" ry="96" fill="none" stroke="#e2d7bd" stroke-width="2"/>
+
+<rect x="88" y="112" width="224" height="66" rx="14" fill="url(#crust1)"/>
+<rect x="88" y="112" width="224" height="20" rx="10" fill="url(#crumb1)" opacity="0.9"/>
+<rect x="96" y="120" width="208" height="52" rx="10" fill="url(#crumb1)"/>
+
+<path d="M104 146 q96 -46 192 0 q-96 34 -192 0z" fill="url(#avo1)"/>
+<path d="M114 144 q86 -34 172 0 q-86 28 -172 0z" fill="#83996a" opacity="0.7"/>
+<path d="M120 141 q80 -28 160 0 q-80 22 -160 0z" fill="#a7bd88" opacity="0.55"/>
+
+<ellipse cx="230" cy="140" rx="24" ry="22" fill="#ffffff"/>
+<circle cx="228" cy="139" r="10" fill="url(#yolk1)"/>
+<circle cx="224" cy="135" r="3" fill="#fff6da" opacity="0.8"/>
+
+<circle cx="150" cy="118" r="2.6" fill="#9a4a24"/>
+<circle cx="168" cy="112" r="2.6" fill="#9a4a24"/>
+<circle cx="188" cy="120" r="2.6" fill="#9a4a24"/>
+<circle cx="206" cy="110" r="2.6" fill="#9a4a24"/>
+<circle cx="264" cy="122" r="2.6" fill="#9a4a24"/>
+<circle cx="130" cy="128" r="2.6" fill="#54613f"/>
+<circle cx="252" cy="130" r="2.6" fill="#54613f"/>
+<circle cx="145" cy="132" r="2.2" fill="#d8b23a"/>
+<circle cx="270" cy="140" r="2.2" fill="#d8b23a"/>
+
+<path d="M96 112 q112 -14 216 0" stroke="#f7ecc9" stroke-width="2" opacity="0.5" fill="none"/>
+</svg>
