@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — The Local Grain</title>
+<meta name="description" content="A look inside The Local Grain — our dishes, coffee and dining room.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">
+      <svg width="38" height="38" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="24" fill="#2a231c"/>
+        <path d="M24 34 C24 34 24 22 24 14" stroke="#e4b15c" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle cx="24" cy="13" r="4" fill="#c98a2c"/>
+        <circle cx="17" cy="18" r="3.2" fill="#c98a2c"/>
+        <circle cx="31" cy="18" r="3.2" fill="#c98a2c"/>
+        <circle cx="15" cy="25" r="2.6" fill="#e4b15c"/>
+        <circle cx="33" cy="25" r="2.6" fill="#e4b15c"/>
+        <path d="M24 34 q-6 -2 -9 -8" stroke="#7c8b6f" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M24 34 q6 -2 9 -8" stroke="#7c8b6f" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">The Local Grain</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle menu"><span></span></button>
+    <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu &amp; Order</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">A look inside</p>
+      <h1>Gallery</h1>
+      <p style="max-width:60ch;">A few favourites from the pass and the dining room. Click any image to see it larger.</p>
+    </div>
+  </section>
+
+  <section style="padding-top: 4rem;">
+    <div class="container">
+      <div class="gallery-grid">
+
+        <figure class="gallery-figure">
+          <button class="gallery-item" type="button" data-full="images/dish-avo-toast.svg" data-caption="Smashed avocado on sourdough with poached egg and dukkah.">
+            <img src="images/dish-avo-toast.svg" alt="Smashed avocado on sourdough toast with a poached egg and dukkah">
+          </button>
+          <figcaption class="gallery-caption">Smashed avocado on sourdough, poached egg &amp; dukkah</figcaption>
+        </figure>
+
+        <figure class="gallery-figure">
+          <button class="gallery-item" type="button" data-full="images/dish-coffee.svg" data-caption="A flat white poured from beans roasted on-site.">
+            <img src="images/dish-coffee.svg" alt="Flat white coffee with latte art on a saucer">
+          </button>
+          <figcaption class="gallery-caption">Flat white, roasted on-site weekly</figcaption>
+        </figure>
+
+        <figure class="gallery-figure">
+          <button class="gallery-item" type="button" data-full="images/interior.svg" data-caption="Our timber dining room on a quiet weekday morning.">
+            <img src="images/interior.svg" alt="Warm timber cafe interior with hanging plants and window light">
+          </button>
+          <figcaption class="gallery-caption">Inside our Erskineville Road dining room</figcaption>
+        </figure>
+
+        <figure class="gallery-figure">
+          <button class="gallery-item" type="button" data-full="images/dish-grain-bowl.svg" data-caption="Roast pumpkin and freekeh bowl, a lunch regular.">
+            <img src="images/dish-grain-bowl.svg" alt="Warm grain bowl with roast pumpkin, greens and seeds">
+          </button>
+          <figcaption class="gallery-caption">Roast pumpkin &amp; freekeh grain bowl</figcaption>
+        </figure>
+
+        <figure class="gallery-figure">
+          <button class="gallery-item" type="button" data-full="images/dish-dessert.svg" data-caption="Lemon curd tart, finished with fresh berries.">
+            <img src="images/dish-dessert.svg" alt="Slice of lemon curd tart topped with berries">
+          </button>
+          <figcaption class="gallery-caption">Lemon curd tart with torched meringue</figcaption>
+        </figure>
+
+        <figure class="gallery-figure">
+          <button class="gallery-item" type="button" data-full="images/dish-brunch-spread.svg" data-caption="A shared table on a Sunday morning.">
+            <img src="images/dish-brunch-spread.svg" alt="Shared brunch table spread with plates, coffee and pastries">
+          </button>
+          <figcaption class="gallery-caption">A shared table on a Sunday morning</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image viewer">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+    <img src="" alt="">
+    <p class="lightbox-caption"></p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-line">
+    <a class="brand" href="index.html" style="color:var(--cream);">
+      <span class="brand-name">The Local Grain</span>
+    </a>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="menu.html">Menu &amp; Order</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="mailto:hello@thelocalgrain.com.au">hello@thelocalgrain.com.au</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2026 The Local Grain Cafe</p>
+  </div>
+</footer>
+
+<script>
+  var navToggle = document.querySelector('.nav-toggle');
+  var mainNav = document.querySelector('.main-nav');
+  navToggle.addEventListener('click', function () {
+    var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    mainNav.classList.toggle('is-open');
+  });
+
+  var galleryButtons = document.querySelectorAll('.gallery-item');
+  var lightbox = document.querySelector('.lightbox');
+  var lightboxImg = lightbox.querySelector('img');
+  var lightboxCaption = lightbox.querySelector('.lightbox-caption');
+  var closeBtn = lightbox.querySelector('.lightbox-close');
+  var lastFocused = null;
+
+  function openLightbox(button) {
+    var fullSrc = button.getAttribute('data-full') || button.querySelector('img').src;
+    var alt = button.querySelector('img').alt;
+    var caption = button.getAttribute('data-caption') || alt;
+    lightboxImg.src = fullSrc;
+    lightboxImg.alt = alt;
+    lightboxCaption.textContent = caption;
+    lastFocused = button;
+    lightbox.classList.add('is-open');
+    closeBtn.focus();
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  galleryButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () { openLightbox(btn); });
+  });
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+  });
+</script>
+</body>
+</html>

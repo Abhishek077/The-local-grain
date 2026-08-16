@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Local Grain — Modern Australian Cafe, Sydney</title>
+<meta name="description" content="The Local Grain is a modern Australian all-day cafe in Sydney serving native-inspired brunch, single-origin coffee and seasonal grain bowls.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+  :root {
+    --sandstone: #efe6d6;
+    --cream: #f8f3e9;
+    --bark: #2a231c;
+    --charcoal-ink: #1e1912;
+    --wattle-gold: #c98a2c;
+    --wattle-gold-light: #e4b15c;
+    --eucalyptus: #7c8b6f;
+    --rust-clay: #a6512a;
+    --rust-clay-dark: #7e3b1c;
+    --line: rgba(42, 35, 28, 0.14);
+    --white: #fffdf8;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Work Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--font-body); background: var(--sandstone); color: var(--bark); line-height: 1.6; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.1; margin: 0 0 1rem; color: var(--charcoal-ink); }
+  h1 { font-size: clamp(2.6rem, 5vw, 4.6rem); font-weight: 500; }
+  h2 { font-size: clamp(1.9rem, 3.2vw, 2.8rem); }
+  p { margin: 0 0 1rem; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+  section { padding: 6rem 0; }
+  .eyebrow { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.75rem; color: var(--rust-clay); font-weight: 600; }
+
+  .skip-link { position: absolute; left: -999px; top: 0; background: var(--charcoal-ink); color: var(--cream); padding: 0.75rem 1.25rem; z-index: 1000; }
+  .skip-link:focus { left: 0; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--wattle-gold); outline-offset: 2px; }
+
+  .btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; padding: 0.85rem 1.6rem; border-radius: 4px; border: 2px solid transparent; cursor: pointer; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
+  .btn-primary { background: var(--rust-clay); color: var(--cream); box-shadow: 0 4px 20px rgba(42,35,28,0.08); }
+  .btn-primary:hover { background: var(--rust-clay-dark); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(42,35,28,0.16); }
+  .btn-secondary { background: transparent; border-color: var(--charcoal-ink); color: var(--charcoal-ink); }
+  .btn-secondary:hover { background: var(--charcoal-ink); color: var(--cream); transform: translateY(-2px); }
+
+  /* Header */
+  .site-header { position: sticky; top: 0; z-index: 500; background: rgba(239,230,214,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .nav-wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap; padding: 1rem 2rem; max-width: 1180px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--charcoal-ink); }
+  .brand-name { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; }
+  .nav-toggle { display: none; background: none; border: 2px solid var(--charcoal-ink); border-radius: 4px; width: 44px; height: 44px; cursor: pointer; position: relative; }
+  .nav-toggle span, .nav-toggle::before, .nav-toggle::after { content: ''; position: absolute; left: 10px; right: 10px; height: 2px; background: var(--charcoal-ink); transition: transform 0.25s ease, opacity 0.25s ease; }
+  .nav-toggle::before { top: 14px; } .nav-toggle span { top: 21px; } .nav-toggle::after { top: 28px; }
+  .nav-toggle[aria-expanded="true"]::before { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"]::after { transform: translateY(-7px) rotate(-45deg); }
+  .nav-toggle[aria-expanded="true"] span { opacity: 0; }
+  .main-nav ul { list-style: none; display: flex; flex-wrap: nowrap; white-space: nowrap; gap: 2rem; margin: 0; padding: 0; }
+  .main-nav a { text-decoration: none; font-weight: 500; font-size: 0.95rem; position: relative; padding: 0.3rem 0.1rem; }
+  .main-nav a::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px; background: var(--rust-clay); transition: width 0.25s ease; }
+  .main-nav a:hover::after, .main-nav a[aria-current="page"]::after { width: 100%; }
+  .main-nav a[aria-current="page"] { color: var(--rust-clay); }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; background: linear-gradient(160deg, var(--sandstone) 0%, var(--cream) 55%, #e7dcc4 100%); padding: 6rem 0 4rem; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
+  .hero-copy p.lede { font-size: 1.15rem; max-width: 46ch; color: #4a4034; }
+  .hero-actions { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+  .hero-art { display: flex; justify-content: center; }
+  .hero-art svg { width: 100%; max-width: 400px; filter: drop-shadow(0 12px 32px rgba(42,35,28,0.16)); }
+
+  /* Feature cards */
+  .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .feature-card { background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(42,35,28,0.08); border: 1px solid var(--line); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .feature-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(42,35,28,0.16); }
+  .feature-icon { width: 44px; height: 44px; margin-bottom: 1rem; color: var(--rust-clay); }
+
+  /* Stats */
+  .section-dark { background: var(--charcoal-ink); color: var(--cream); }
+  .section-dark h2 { color: var(--cream); }
+  .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+  .stat-num { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); color: var(--wattle-gold-light); margin: 0; }
+  .stat-label { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.75; }
+
+  /* CTA banner */
+  .cta-banner { background: linear-gradient(135deg, var(--rust-clay) 0%, var(--rust-clay-dark) 100%); color: var(--cream); border-radius: 12px; padding: 4rem; text-align: center; }
+  .cta-banner h2 { color: var(--cream); }
+
+  /* Footer */
+  .site-footer { background: var(--charcoal-ink); color: var(--cream); padding: 2rem 0; }
+  .footer-line { display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap; gap: 2rem; }
+  .footer-line .brand-name { font-size: 1.1rem; }
+  .footer-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 2rem; margin: 0; padding: 0; }
+  .footer-nav a { text-decoration: none; opacity: 0.85; font-size: 0.88rem; white-space: nowrap; }
+  .footer-nav a:hover { opacity: 1; text-decoration: underline; }
+  .footer-copy { font-size: 0.8rem; opacity: 0.7; white-space: nowrap; margin: 0; }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-art { order: -1; }
+    .hero-art svg { max-width: 280px; }
+    .feature-grid, .stats-strip { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 860px) {
+    .nav-toggle { display: block; }
+    .main-nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--line); box-shadow: 0 4px 20px rgba(42,35,28,0.08); display: none; }
+    .main-nav.is-open { display: block; }
+    .main-nav ul { flex-direction: column; white-space: normal; gap: 0; padding: 1rem 2rem 2rem; }
+    .main-nav li { border-bottom: 1px solid var(--line); }
+    .main-nav a { display: block; padding: 0.9rem 0; }
+  }
+  @media (max-width: 640px) {
+    .feature-grid, .stats-strip { grid-template-columns: 1fr; }
+    section { padding: 4rem 0; }
+  }
+  @media (max-width: 700px) {
+    .footer-line { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition-duration: 0.001ms !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">
+      <svg width="38" height="38" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="24" fill="#2a231c"/>
+        <path d="M24 34 C24 34 24 22 24 14" stroke="#e4b15c" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle cx="24" cy="13" r="4" fill="#c98a2c"/>
+        <circle cx="17" cy="18" r="3.2" fill="#c98a2c"/>
+        <circle cx="31" cy="18" r="3.2" fill="#c98a2c"/>
+        <circle cx="15" cy="25" r="2.6" fill="#e4b15c"/>
+        <circle cx="33" cy="25" r="2.6" fill="#e4b15c"/>
+        <path d="M24 34 q-6 -2 -9 -8" stroke="#7c8b6f" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M24 34 q6 -2 9 -8" stroke="#7c8b6f" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">The Local Grain</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle menu"><span></span></button>
+    <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="menu.html">Menu &amp; Order</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Sydney &middot; Modern Australian Cafe</p>
+        <h1>The Local Grain</h1>
+        <p class="lede">A neighbourhood cafe on Erskineville Road serving native-inspired brunch, slow-roasted single-origin coffee and seasonal grain bowls. We cook with what's local, share tables with strangers, and pour a flat white worth crossing the suburb for.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="menu.html">View menu &amp; order</a>
+          <a class="btn btn-secondary" href="contact.html">Book a table</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 420 420" role="img" aria-labelledby="heroTitle">
+          <title id="heroTitle">Illustration of a wattle branch curling around a steaming coffee cup</title>
+          <circle cx="210" cy="210" r="200" fill="#f8f3e9"/>
+          <circle cx="210" cy="210" r="200" fill="none" stroke="#e4dcc6" stroke-width="2"/>
+          <path d="M120 300 C 100 200, 140 120, 210 90" stroke="#7c8b6f" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <circle cx="210" cy="90" r="10" fill="#c98a2c"/>
+          <circle cx="188" cy="110" r="8" fill="#e4b15c"/>
+          <circle cx="150" cy="150" r="7" fill="#c98a2c"/>
+          <circle cx="130" cy="200" r="7" fill="#e4b15c"/>
+          <circle cx="118" cy="250" r="6" fill="#c98a2c"/>
+          <g transform="translate(210,240)">
+            <ellipse cx="0" cy="120" rx="95" ry="16" fill="#e4dcc6"/>
+            <path d="M-80 40 h160 l-14 80 a10 10 0 0 1 -10 8 h-112 a10 10 0 0 1 -10 -8 z" fill="#2a231c"/>
+            <ellipse cx="0" cy="40" rx="80" ry="14" fill="#6b4429"/>
+            <path d="M0 15 q26 15 26 35 q0 20 -26 32 q-26 -12 -26 -32 q0 -20 26 -35z" fill="#f8f3e9" opacity="0.9"/>
+            <path d="M80 55 q35 0 35 30 q0 26 -28 30" stroke="#2a231c" stroke-width="10" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <p class="eyebrow">Why people come back</p>
+      <h2>Three things we obsess over</h2>
+      <div class="feature-grid" style="margin-top: 2.5rem;">
+        <article class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <circle cx="24" cy="20" r="12"/><path d="M8 40c0-8 7-14 16-14s16 6 16 14" stroke-linecap="round"/>
+          </svg>
+          <h3>Local &amp; seasonal</h3>
+          <p>Produce sourced from growers within a day's drive, menus rewritten with the seasons.</p>
+        </article>
+        <article class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path d="M10 18h28l-3 18a6 6 0 0 1-6 5H19a6 6 0 0 1-6-5z"/><path d="M38 20h3a5 5 0 0 1 0 10h-3" stroke-linecap="round"/>
+          </svg>
+          <h3>Roasted on-site</h3>
+          <p>Single-origin beans roasted weekly in-house, pulled within days of roasting.</p>
+        </article>
+        <article class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path d="M24 6c8 6 14 12 14 20a14 14 0 1 1-28 0c0-8 6-14 14-20z"/>
+          </svg>
+          <h3>Native ingredients</h3>
+          <p>Finger lime, saltbush, wattleseed and lemon myrtle woven through the menu.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="container">
+      <div class="stats-strip">
+        <div><p class="stat-num">2016</p><p class="stat-label">Opened our doors</p></div>
+        <div><p class="stat-num">45+</p><p class="stat-label">Local growers &amp; roasters</p></div>
+        <div><p class="stat-num">7am</p><p class="stat-label">Daily from, 7 days</p></div>
+        <div><p class="stat-num">100%</p><p class="stat-label">Compostable takeaway</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Hungry already?</h2>
+        <p>Browse the full menu and build your order — pickup and dine-in, no app required.</p>
+        <a class="btn btn-secondary" style="background:var(--cream); color:var(--rust-clay-dark); border-color:var(--cream);" href="menu.html">Start an order</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-line">
+    <a class="brand" href="index.html" style="color:var(--cream);">
+      <span class="brand-name">The Local Grain</span>
+    </a>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="menu.html">Menu &amp; Order</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="mailto:hello@thelocalgrain.com.au">hello@thelocalgrain.com.au</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2026 The Local Grain Cafe</p>
+  </div>
+</footer>
+
+/* Menu page */
+.page-hero { padding: 4rem 0 2rem; background: linear-gradient(160deg, var(--sandstone) 0%, var(--cream) 100%); border-bottom: 1px solid var(--line); }
+.page-hero .eyebrow { margin-bottom: 0.5rem; }
+
+.menu-layout { display: grid; grid-template-columns: 1fr 340px; gap: 4rem; align-items: start; }
+.menu-category { margin-bottom: 4rem; }
+.menu-category h2 { border-bottom: 2px solid var(--wattle-gold); padding-bottom: 0.5rem; display: inline-block; }
+
+.menu-item { display: grid; grid-template-columns: 1fr auto auto; gap: 1rem; align-items: center; padding: 1.1rem 0; border-bottom: 1px dashed var(--line); }
+.menu-item-name { font-weight: 600; font-size: 1.05rem; }
+.menu-item-desc { font-size: 0.9rem; color: #5c5346; margin: 0.15rem 0 0; }
+.menu-item-price { font-family: var(--font-mono); font-weight: 600; color: var(--rust-clay); white-space: nowrap; }
+.menu-item-add { background: var(--eucalyptus); color: var(--white); border: none; border-radius: 50%; width: 38px; height: 38px; font-size: 1.3rem; line-height: 1; cursor: pointer; transition: transform 0.2s ease, background 0.2s ease; }
+.menu-item-add:hover { background: #5c6a50; transform: rotate(90deg) scale(1.1); }
+.menu-item-tag { font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: #5c6a50; border: 1px solid var(--eucalyptus); border-radius: 999px; padding: 0.1rem 0.5rem; margin-left: 0.5rem; }
+
+.docket { position: sticky; top: 110px; background: var(--white); border-radius: 4px; box-shadow: 0 12px 32px rgba(42,35,28,0.16); padding: 2rem; font-family: var(--font-mono); }
+.docket h2 { font-family: var(--font-mono); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 2px dashed var(--bark); padding-bottom: 0.75rem; }
+.docket-empty { font-size: 0.85rem; color: #7a7061; padding: 1rem 0; }
+.docket-list { list-style: none; margin: 0; padding: 0; font-size: 0.85rem; }
+.docket-list li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.4rem 0; }
+.docket-remove { background: none; border: none; color: var(--rust-clay); cursor: pointer; font-family: var(--font-mono); text-decoration: underline; font-size: 0.75rem; padding: 0; }
+.docket-total { display: flex; justify-content: space-between; font-weight: 600; border-top: 2px dashed var(--bark); margin-top: 0.75rem; padding-top: 0.75rem; font-size: 1rem; }
+.docket-note { font-size: 0.7rem; color: #7a7061; margin-top: 1rem; line-height: 1.5; }
+.docket .btn { width: 100%; justify-content: center; margin-top: 1rem; }
+
+@media (max-width: 900px) {
+  .menu-layout { grid-template-columns: 1fr; }
+  .docket { position: static; }
+}
+@media (max-width: 640px) {
+  .menu-item { grid-template-columns: 1fr auto; }
+  .menu-item-price { grid-column: 1; }
+}
+
+/* Contact page */
+.contact-layout { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 4rem; }
+.contact-info-list { list-style: none; margin: 2rem 0 0; padding: 0; }
+.contact-info-list li { display: flex; gap: 0.85rem; align-items: flex-start; margin-bottom: 2rem; }
+.contact-info-list svg { width: 24px; height: 24px; flex-shrink: 0; color: var(--rust-clay); margin-top: 0.15rem; }
+.contact-info-list a { text-decoration: underline; text-decoration-color: var(--wattle-gold); }
+
+.social-row { display: flex; gap: 0.75rem; margin-top: 2rem; }
+.social-row a { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--charcoal-ink); color: var(--cream); transition: transform 0.2s ease, background 0.2s ease; }
+.social-row a:hover, .social-row a:focus-visible { background: var(--rust-clay); transform: translateY(-3px); }
+.social-row svg { width: 20px; height: 20px; }
+
+.map-note { margin-top: 4rem; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(42,35,28,0.08); }
+
+.form-card { background: var(--white); border-radius: 12px; padding: 4rem; box-shadow: 0 4px 20px rgba(42,35,28,0.08); }
+.form-row { margin-bottom: 2rem; }
+.form-row label { display: block; font-weight: 600; margin-bottom: 0.4rem; font-size: 0.95rem; }
+.form-row .hint { font-size: 0.8rem; color: #7a7061; display: block; margin-top: 0.3rem; }
+.form-row input, .form-row textarea, .form-row select { width: 100%; font-family: var(--font-body); font-size: 1rem; padding: 0.75rem 0.9rem; border: 1.5px solid var(--line); border-radius: 4px; background: var(--cream); color: var(--bark); transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.form-row input:focus, .form-row textarea:focus, .form-row select:focus { border-color: var(--wattle-gold); outline: none; box-shadow: 0 0 0 4px rgba(201, 138, 44, 0.18); }
+
+.error-msg { color: var(--rust-clay-dark); font-size: 0.82rem; margin-top: 0.35rem; display: none; font-weight: 500; }
+.form-row.has-error .error-msg { display: block; }
+.form-row.has-error input, .form-row.has-error textarea { border-color: var(--rust-clay-dark); }
+
+.form-feedback { border-radius: 4px; padding: 1rem 1.2rem; margin-bottom: 2rem; font-weight: 500; display: none; }
+.form-feedback.is-visible { display: block; }
+.form-feedback.success { background: rgba(124, 139, 111, 0.18); border: 1.5px solid #5c6a50; color: #5c6a50; }
+.form-feedback.error { background: rgba(166, 81, 42, 0.12); border: 1.5px solid var(--rust-clay); color: var(--rust-clay-dark); }
+
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .form-card { padding: 2rem; }
+}
+/* About page */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+
+.timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--wattle-gold); }
+.timeline li { position: relative; padding: 0 0 4rem 2rem; }
+.timeline li::before { content: ''; position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; background: var(--rust-clay); border-radius: 50%; border: 2px solid var(--cream); }
+.timeline .year { font-family: var(--font-mono); font-size: 0.8rem; color: var(--rust-clay); text-transform: uppercase; letter-spacing: 0.08em; }
+
+.values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+.value-card { padding: 2rem; border-radius: 12px; border: 1px solid var(--line); background: var(--white); }
+
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.team-card { text-align: center; }
+.team-avatar { width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; box-shadow: 0 4px 20px rgba(42,35,28,0.08); }
+.team-avatar img, .team-avatar svg { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.section-alt { background: var(--cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .team-grid, .values-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .team-grid, .values-grid { grid-template-columns: 1fr; }
+}
+
+/* Home page — opening hours */
+.hours-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.hours-table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 0.95rem; }
+.hours-table tr { border-bottom: 1px dashed var(--line); }
+.hours-table td { padding: 0.9rem 0; }
+.hours-table td:first-child { font-weight: 600; color: var(--charcoal-ink); }
+.hours-table td:last-child { text-align: right; color: var(--rust-clay); }
+.hours-table tr.closed td:last-child { color: #7a7061; }
+
+/* Home page — testimonials */
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.testimonial-card { background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(42,35,28,0.08); border: 1px solid var(--line); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(42,35,28,0.16); }
+.testimonial-stars { color: var(--wattle-gold); font-size: 1.1rem; letter-spacing: 0.15em; margin-bottom: 0.75rem; }
+.testimonial-quote { font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--charcoal-ink); margin-bottom: 1rem; }
+.testimonial-author { font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: #5c5346; }
+
+@media (max-width: 900px) {
+  .hours-layout { grid-template-columns: 1fr; }
+  .testimonial-grid { grid-template-columns: 1fr; }
+}
+
+<script>
+  var navToggle = document.querySelector('.nav-toggle');
+  var mainNav = document.querySelector('.main-nav');
+  navToggle.addEventListener('click', function () {
+    var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    mainNav.classList.toggle('is-open');
+  });
+</script>
+</body>
+</html>

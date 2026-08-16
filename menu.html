@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu & Order — The Local Grain</title>
+<meta name="description" content="Browse the The Local Grain menu and build your order docket — brunch, coffee, grain bowls and sweets.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">
+      <svg width="38" height="38" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="24" fill="#2a231c"/>
+        <path d="M24 34 C24 34 24 22 24 14" stroke="#e4b15c" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle cx="24" cy="13" r="4" fill="#c98a2c"/>
+        <circle cx="17" cy="18" r="3.2" fill="#c98a2c"/>
+        <circle cx="31" cy="18" r="3.2" fill="#c98a2c"/>
+        <circle cx="15" cy="25" r="2.6" fill="#e4b15c"/>
+        <circle cx="33" cy="25" r="2.6" fill="#e4b15c"/>
+        <path d="M24 34 q-6 -2 -9 -8" stroke="#7c8b6f" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M24 34 q6 -2 9 -8" stroke="#7c8b6f" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">The Local Grain</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle menu"><span></span></button>
+    <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" aria-current="page">Menu &amp; Order</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Order ahead</p>
+      <h1>Menu</h1>
+      <p style="max-width:60ch;">Tap the <strong>+</strong> next to any dish to add it to your docket on the right. This is a design prototype of our ordering system — it totals your order live, but checkout isn't connected to payment.</p>
+    </div>
+  </section>
+
+  <section style="padding-top: 4rem;">
+    <div class="container menu-layout">
+
+      <div>
+
+        <div class="menu-category">
+          <h2>Brunch</h2>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item-name">Smashed avocado on sourdough</span>
+              <span class="menu-item-tag">VG option</span>
+              <p class="menu-item-desc">Whipped avocado, poached egg, dukkah, chilli oil, local sourdough.</p>
+            </div>
+            <span class="menu-item-price">$19.50</span>
+            <button class="menu-item-add" type="button" aria-label="Add smashed avocado on sourdough to order">+</button>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item-name">Wattleseed pancakes</span>
+              <p class="menu-item-desc">Native wattleseed batter, macerated berries, mascarpone, maple.</p>
+            </div>
+            <span class="menu-item-price">$21.00</span>
+            <button class="menu-item-add" type="button" aria-label="Add wattleseed pancakes to order">+</button>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item-name">Bacon &amp; egg roll</span>
+              <p class="menu-item-desc">Milk bun, streaky bacon, fried egg, tomato relish, rocket.</p>
+            </div>
+            <span class="menu-item-price">$14.00</span>
+            <button class="menu-item-add" type="button" aria-label="Add bacon and egg roll to order">+</button>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item-name">Shakshuka</span>
+              <span class="menu-item-tag">GF</span>
+              <p class="menu-item-desc">Baked eggs in spiced tomato, sweet potato, feta, toasted flatbread.</p>
+            </div>
+            <span class="menu-item-price">$22.50</span>
+            <button class="menu-item-add" type="button" aria-label="Add shakshuka to order">+</button>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h2>Grain Bowls &amp; Lunch</h2>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item-name">Roast pumpkin &amp; freekeh bowl</span>
+              <span class="menu-item-tag">VG</span>
+              <p class="menu-item-desc">Freekeh, roast pumpkin, kale, pepitas, tahini dressing.</p>
+            </div>
+            <span class="menu-item-price">$23.00</span>
+            <button class="menu-item-add" type="button" aria-label="Add roast pumpkin and freekeh bowl to order">+</button>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item-name">Miso salmon rice bowl</span>
+              <p class="menu-item-desc">Miso-glazed salmon, short-grain rice, pickled cucumber, sesame.</p>
+            </div>
+            <span class="menu-item-price">$26.50</span>
+            <button class="menu-item-add" type="button" aria-label="Add miso salmon rice bowl to order">+</button>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item-name">Chicken &amp; grain Caesar</span>
+              <p class="menu-item-desc">Grilled chicken, cos, pearl barley, parmesan, sourdough crumb.</p>
+            </div>
+            <span class="menu-item-price">$22.00</span>
+            <button class="menu-item-add" type="button" aria-label="Add chicken and grain caesar to order">+</button>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h2>Coffee &amp; Drinks</h2>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item-name">Flat white</span>
+              <p class="menu-item-desc">Single-origin, roasted on-site weekly.</p>
+            </div>
+            <span class="menu-item-price">$4.80</span>
+            <button class="menu-item-add" type="button" aria-label="Add flat white to order">+</button>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item-name">Iced long black</span>
+              <p class="menu-item-desc">Double shot over ice, served with soda on the side.</p>
+            </div>
+            <span class="menu-item-price">$5.20</span>
+            <button class="menu-item-add" type="button" aria-label="Add iced long black to order">+</button>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item-name">Lemon myrtle iced tea</span>
+              <p class="menu-item-desc">House-steeped, lightly sweetened, served over ice.</p>
+            </div>
+            <span class="menu-item-price">$6.00</span>
+            <button class="menu-item-add" type="button" aria-label="Add lemon myrtle iced tea to order">+</button>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h2>Sweets</h2>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item-name">Lemon curd tart</span>
+              <p class="menu-item-desc">Shortcrust, torched meringue, fresh berries.</p>
+            </div>
+            <span class="menu-item-price">$8.50</span>
+            <button class="menu-item-add" type="button" aria-label="Add lemon curd tart to order">+</button>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item-name">Banana bread</span>
+              <p class="menu-item-desc">Toasted, whipped honey butter.</p>
+            </div>
+            <span class="menu-item-price">$7.00</span>
+            <button class="menu-item-add" type="button" aria-label="Add banana bread to order">+</button>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="docket" aria-label="Your order">
+        <h2>Your Docket <span class="docket-count"></span></h2>
+        <p class="docket-empty">No items yet — tap a <strong>+</strong> to start your order.</p>
+        <ul class="docket-list" aria-live="polite"></ul>
+        <div class="docket-total">
+          <span>Total</span>
+          <span class="docket-total-value">$0.00</span>
+        </div>
+        <button class="btn btn-primary docket-place-order" type="button" disabled>Place order</button>
+        <p class="docket-note docket-feedback" role="status"></p>
+        <p class="docket-note">Prototype only — this docket runs entirely in your browser (no server, no payment processing).</p>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-line">
+    <a class="brand" href="index.html" style="color:var(--cream);">
+      <span class="brand-name">The Local Grain</span>
+    </a>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="menu.html">Menu &amp; Order</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="mailto:hello@thelocalgrain.com.au">hello@thelocalgrain.com.au</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2026 The Local Grain Cafe</p>
+  </div>
+</footer>
+
+<script>
+  var navToggle = document.querySelector('.nav-toggle');
+  var mainNav = document.querySelector('.main-nav');
+  navToggle.addEventListener('click', function () {
+    var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    mainNav.classList.toggle('is-open');
+  });
+
+  var addButtons = document.querySelectorAll('.menu-item-add');
+  var docketList = document.querySelector('.docket-list');
+  var docketEmpty = document.querySelector('.docket-empty');
+  var docketTotalValue = document.querySelector('.docket-total-value');
+  var docketCount = document.querySelector('.docket-count');
+  var placeOrderBtn = document.querySelector('.docket-place-order');
+  var order = {};
+
+  function formatPrice(n) { return '$' + n.toFixed(2); }
+
+  function renderDocket() {
+    docketList.innerHTML = '';
+    var items = Object.keys(order);
+    var total = 0, count = 0;
+    docketEmpty.style.display = items.length === 0 ? 'block' : 'none';
+
+    items.forEach(function (name) {
+      var item = order[name];
+      total += item.price * item.qty;
+      count += item.qty;
+
+      var li = document.createElement('li');
+      var label = document.createElement('span');
+      label.textContent = item.qty + '\u00D7 ' + name;
+
+      var right = document.createElement('span');
+      right.style.display = 'flex';
+      right.style.gap = '0.5rem';
+      right.style.alignItems = 'center';
+
+      var priceSpan = document.createElement('span');
+      priceSpan.textContent = formatPrice(item.price * item.qty);
+
+      var removeBtn = document.createElement('button');
+      removeBtn.type = 'button';
+      removeBtn.className = 'docket-remove';
+      removeBtn.textContent = 'remove';
+      removeBtn.setAttribute('aria-label', 'Remove one ' + name + ' from order');
+      removeBtn.addEventListener('click', function () {
+        order[name].qty -= 1;
+        if (order[name].qty <= 0) delete order[name];
+        renderDocket();
+      });
+
+      right.appendChild(priceSpan);
+      right.appendChild(removeBtn);
+      li.appendChild(label);
+      li.appendChild(right);
+      docketList.appendChild(li);
+    });
+
+    docketTotalValue.textContent = formatPrice(total);
+    docketCount.textContent = count > 0 ? '(' + count + ')' : '';
+    placeOrderBtn.disabled = items.length === 0;
+  }
+
+  addButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var itemEl = btn.closest('.menu-item');
+      var name = itemEl.querySelector('.menu-item-name').textContent.trim();
+      var price = parseFloat(itemEl.querySelector('.menu-item-price').textContent.replace('$', '').trim());
+      if (!order[name]) order[name] = { price: price, qty: 0 };
+      order[name].qty += 1;
+      renderDocket();
+    });
+  });
+
+  placeOrderBtn.addEventListener('click', function () {
+    var feedback = document.querySelector('.docket-feedback');
+    feedback.textContent = 'This is a design prototype — online checkout is not connected. In a live build, this button would send your docket to the kitchen.';
+    feedback.classList.add('is-visible');
+  });
+
+  renderDocket();
+</script>
+</body>
+</html>
